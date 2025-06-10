@@ -1,16 +1,27 @@
-// components/ModelLoader.tsx
 'use client';
 
 import { useGLTF } from '@react-three/drei';
 import { GLTF } from 'three-stdlib';
+import { Mesh, MeshStandardMaterial, Object3D, BufferGeometry } from 'three';
+
+// Tipo mais compatível com o que useGLTF retorna
+type GLTFNode = Object3D & {
+  geometry?: BufferGeometry;
+  material?: MeshStandardMaterial;
+  position?: [number, number, number];
+  rotation?: [number, number, number];
+  scale?: number | [number, number, number];
+};
+
+type GLTFMaterial = MeshStandardMaterial;
 
 type GLTFResult = GLTF & {
-  nodes: Record<string, any>;
-  materials: Record<string, any>;
+  nodes: Record<string, GLTFNode>;
+  materials: Record<string, GLTFMaterial>;
 };
 
 function SwordModel({ modelPath }: { modelPath: string }) {
-  const { nodes, materials } = useGLTF(modelPath) as GLTFResult;
+  const { nodes, materials } = useGLTF(modelPath) as unknown as GLTFResult;
   
   return (
     <group dispose={null}>
@@ -27,11 +38,9 @@ function SwordModel({ modelPath }: { modelPath: string }) {
 }
 
 export function ModelLoader({ modelPath }: { modelPath: string }) {
-  // Implemente loaders específicos para cada modelo ou use um loader genérico
   switch(modelPath) {
     case '/models/Apartamento.glb':
       return <SwordModel modelPath={modelPath} />;
-    // Adicione casos para outros modelos
     default:
       return (
         <mesh>

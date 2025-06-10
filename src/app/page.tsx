@@ -3,6 +3,7 @@
 import { useState, useRef, Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment, useGLTF } from '@react-three/drei';
+import { OrbitControls as OrbitControlsType } from 'three-stdlib';
 import { motion } from 'framer-motion';
 import { ThemeWrapper } from '../../components/ThemeWrapper';
 
@@ -16,8 +17,8 @@ interface ModelOption {
 
 export default function MedievalGallery() {
   const [selectedModel, setSelectedModel] = useState<string>('sword');
-  const orbitControlsRef = useRef<any>(null);
-
+  const orbitControlsRef = useRef<OrbitControlsType>(null);
+  
   const modelOptions: ModelOption[] = [
     {
       id: 'sword',
@@ -84,7 +85,7 @@ export default function MedievalGallery() {
   const handleModelChange = (modelId: string) => {
     setSelectedModel(modelId);
     if (orbitControlsRef.current) {
-      orbitControlsRef.current.reset();
+      orbitControlsRef.current.reset(); // Agora isso vai funcionar
     }
   };
 
