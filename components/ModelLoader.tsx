@@ -5,7 +5,7 @@ import { GLTF } from 'three-stdlib';
 import { Mesh, MeshStandardMaterial, Object3D, BufferGeometry } from 'three';
 
 type GLTFNode = Object3D & {
-  geometry: BufferGeometry;
+  geometry?: BufferGeometry;
   material?: MeshStandardMaterial;
   position?: [number, number, number];
   rotation?: [number, number, number];
@@ -16,12 +16,21 @@ type GLTFMaterial = MeshStandardMaterial;
 
 type GLTFResult = GLTF & {
   nodes: Record<string, GLTFNode>;
-  materials: Record<string, GLTFMaterial>;
+  materials: Record<string, MeshStandardMaterial>;
 };
 
 function SwordModel({ modelPath }: { modelPath: string }) {
-  const { nodes, materials } = useGLTF('/path/to/model.glb') as unknown as GLTFResult;
+  const { nodes, materials } = useGLTF(modelPath) as unknown as {
+    nodes: { apartamento: { geometry: BufferGeometry } };
+    materials: { metal: MeshStandardMaterial };
+  };
   
+  // Verificação adicional para garantir que a geometria existe
+  if (!nodes.apartamento?.geometry) {
+    console.error('Geometry not found in model');
+    return null;
+  }
+
   return (
     <group dispose={null}>
       <mesh
@@ -49,3 +58,6 @@ export function ModelLoader({ modelPath }: { modelPath: string }) {
       );
   }
 }
+
+// Pré-carregamento opcional
+useGLTF.preload('/models/Apartamento.glb');
