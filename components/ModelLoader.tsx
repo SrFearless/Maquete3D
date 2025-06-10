@@ -4,9 +4,8 @@ import { useGLTF } from '@react-three/drei';
 import { GLTF } from 'three-stdlib';
 import { Mesh, MeshStandardMaterial, Object3D, BufferGeometry } from 'three';
 
-// Tipo mais compatível com o que useGLTF retorna
 type GLTFNode = Object3D & {
-  geometry?: BufferGeometry;
+  geometry: BufferGeometry;
   material?: MeshStandardMaterial;
   position?: [number, number, number];
   rotation?: [number, number, number];
@@ -21,7 +20,7 @@ type GLTFResult = GLTF & {
 };
 
 function SwordModel({ modelPath }: { modelPath: string }) {
-  const { nodes, materials } = useGLTF(modelPath) as unknown as GLTFResult;
+  const { nodes, materials } = useGLTF('/path/to/model.glb') as unknown as GLTFResult;
   
   return (
     <group dispose={null}>
