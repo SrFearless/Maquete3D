@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
 
 const topRunners = [
-  {name: "Aqui você vai encontrar meus trabalhos que são requisitados para conclusão de módulos, eles são básicos apenas para os alunos entender a lógica."},
+  {name: "Explore o apartamento em três dimensões com medidas técnicas, Trazendo uma visualização em 3D para melhor imersão"},
 ]
 
 export default function RankingMarquee() {

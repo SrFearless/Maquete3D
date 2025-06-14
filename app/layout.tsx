@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { MedievalSharp } from 'next/font/google';
+import { NavBar } from "@/components/nav-bar"
+import RankingMarquee from "@/components/ranking-marquee"
 
 const medievalFont = MedievalSharp({ subsets: ['latin'], weight: '400' });
 
@@ -31,8 +33,9 @@ export default function RootLayout({
   return (
     <html className={medievalFont.className} lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+          <NavBar />
+          <RankingMarquee />
         {children}
       </body>
     </html>
