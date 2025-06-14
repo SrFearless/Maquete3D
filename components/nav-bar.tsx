@@ -46,6 +46,26 @@ export function NavBar() {
               >
                 <span>Voltar ao Portifólio</span>
               </Link>
+              <Link 
+                href="/" 
+                className={cn(
+                  "flex items-center gap-3 p-3 rounded-md font-pixel text-amber-200 hover:bg-amber-900/50",
+                  pathname === "/" && "bg-amber-900/30 border-l-4 border-amber-500"
+                )}
+                onClick={() => setIsOpen(false)}
+              >
+                <span>🏰 Maquetes</span>
+              </Link>
+              <Link 
+                href="/sobre" 
+                className={cn(
+                  "flex items-center gap-3 p-3 rounded-md font-pixel text-amber-200 hover:bg-amber-900/50",
+                  pathname === "/sobre" && "bg-amber-900/30 border-l-4 border-amber-500"
+                )}
+                onClick={() => setIsOpen(false)}
+              >
+                <span>📜 Sobre</span>
+              </Link>
             </nav>
           </SheetContent>
         </Sheet>
@@ -59,6 +79,24 @@ export function NavBar() {
             )}
           >
             Voltar ao Portifólio
+          </Link>
+          <Link 
+            href="/" 
+            className={cn(
+              "font-pixel text-amber-300 hover:text-amber-200 px-3 py-1 rounded-md transition-colors",
+              pathname === "/" && "bg-amber-900/30 border-b-2 border-amber-500"
+            )}
+          >
+            🏰 Maquetes
+          </Link>
+          <Link 
+            href="/sobre" 
+            className={cn(
+              "font-pixel text-amber-300 hover:text-amber-200 px-3 py-1 rounded-md transition-colors",
+              pathname === "/sobre" && "bg-amber-900/30 border-b-2 border-amber-500"
+            )}
+          >
+            📜 Sobre
           </Link>
         </nav>
       </div>

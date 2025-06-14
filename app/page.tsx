@@ -48,7 +48,7 @@
                 description: 'Dimensões Técnicas do Quarto',
                 modelPath: '/models/X.glb',
                 scale: [0.2, 0.2, 0.2],
-                position: [0, 0, 7],
+                position: [0, 0, 1],
                 dimensions: 'Quarto: 3.00m x 2.50m | Janela: 1.20m x 1.10m | Porta: 2.10m x 0.75m'
               },
               {
@@ -57,7 +57,7 @@
                 description: 'Dimensões Técnicas do Quarto',
                 modelPath: '/models/X.glb',
                 scale: [0.2, 0.2, 0.2],
-                position: [0, 0, 7],
+                position: [0, 0, 1],
                 dimensions: 'Quarto: 3.00m x 2.50m | Abertura: 1,35m x 0,50m | Janela: 1.20m x 1.10m | Porta: 2.10m x 0.75m'
               },
               {
@@ -66,7 +66,7 @@
                 description: 'Dimensões Técnicas do Quarto',
                 modelPath: '/models/X.glb',
                 scale: [0.2, 0.2, 0.2],
-                position: [0, 0, 7],
+                position: [0, 0, 1],
                 dimensions: 'Quarto: 2.60m x 2.65m (Entrada) 1.90m (Fundo) | Janela: 1.20m x 0.80m | Porta: 2.10m x 0.85m'
               },
               {
@@ -75,7 +75,7 @@
                 description: 'Dimensões Técnicas do Quarto',
                 modelPath: '/models/X.glb',
                 scale: [0.2, 0.2, 0.2],
-                position: [0, 0, 7],
+                position: [0, 0, 1],
                 dimensions: 'Quarto: 2.20m x 1.20m | Porta: 2.10m x 0.65m'
               },
               {
@@ -84,7 +84,7 @@
                 description: 'Dimensões Técnicas do Quarto',
                 modelPath: '/models/X.glb',
                 scale: [0.2, 0.2, 0.2],
-                position: [0, 0, 7],
+                position: [0, 0, 1],
                 dimensions: 'Quarto: 4.00m x 2.90m | Janela: 1.80m x 1.10m | Entrada: 1.30m x 1.15m'
               },
               {
@@ -93,7 +93,7 @@
                 description: 'Dimensões Técnicas do Quarto',
                 modelPath: '/models/X.glb',
                 scale: [0.2, 0.2, 0.2],
-                position: [0, 0, 7],
+                position: [0, 0, 1],
                 dimensions: 'Quarto: 1.30m x 1.50m | Janela: 1.00m x 0.80m | Porta: 2.10m x 0.75m'
               }
             ];
