@@ -35,8 +35,8 @@
                 description: 'Visão completa do apartamento',
                 modelPath: '/models/Apartamento.glb',
                 texturePath: '/textures/sword_metal.jpg',
-                scale: [0.2, 0.2, 0.2],
-                position: [0.7, 1, 1.5],
+                scale: [0.3, 0.3, 0.3],
+                position: [0.9, 0.0, 1.5],
                 dimensions: 'Área total: 85m² | 3 Quartos | 1 Banheiro | 1 Cozinha | 1 Lavanderia | 1 Sala'
               },
               {
@@ -157,7 +157,7 @@
                   </header>
           
                   {/* Área do Modelo 3D */}
-                  <div className="relative h-[67vh] w-full border-b border-stone-300 bg-stone-800">
+                  <div className="relative h-[40vh] w-full border-b border-stone-300 bg-stone-800">
                     <Canvas shadows camera={{ position: [0, 0, 8], fov: 45 }}>
                       <ambientLight intensity={0.7} />
                       <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={1.2} castShadow />
@@ -181,7 +181,7 @@
                   </div>
           
                   {/* Descrição do Modelo */}
-                  <div className="px-4 py-2 max-w-3xl mx-auto text-center">
+                  <div className="px-4 py-9 max-w-full mx-auto text-center border-b">
                     <h2 className="text-2xl font-medieval text-stone-100">
                       {currentModel.label}
                     </h2>
@@ -207,8 +207,8 @@
                                 whileTap={{ scale: 0.95 }}
                                 className={`py-1 px-2 rounded-lg text-center transition-all ${
                                   selectedModel === option.id
-                                    ? 'bg-stone-800 text-stone-100 shadow-lg py-10'
-                                    : 'bg-stone-300 text-stone-800 hover:bg-stone-400 border-[2px] border-amber-700 py-8'
+                                    ? 'bg-stone-800 text-stone-100 shadow-lg py-5'
+                                    : 'bg-stone-300 text-stone-800 hover:bg-stone-400 border-[2px] border-amber-700 py-5'
                                 }`}
                               >
                                 <div className="text-sm font-medieval">{option.label}</div>
@@ -227,9 +227,9 @@
 
                   </div>
                   {/* Opções de Modelos Desktop*/}
-                  <div className="hidden md:block fixed bottom-0 left-0 right-0 bg-stone-800 border-t border-stone-300 py-3">
+                  <div className="hidden md:block fixed bottom-0 left-0 right-0 bg-stone-800 border-t border-stone-300 py-12">
                     <div className="container mx-auto px-4">
-                      <div className="grid grid-cols-8 gap-4">
+                      <div className="grid grid-cols-8 gap-2">
                         {modelOptions.map((option) => (
                           <motion.button
                             key={option.id}
