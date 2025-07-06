@@ -89,7 +89,7 @@ export default function AboutPage() {
         {/* Voltar para galeria */}
         <div className="mt-12 text-center">
           <Button asChild className="font-pixel bg-stone-700 hover:bg-stone-600 text-amber-300 border border-amber-700">
-            <Link href="/galeria">↩ Voltar para a Galeria</Link>
+            <Link href="/">↩ Voltar para as Maquetes</Link>
           </Button>
         </div>
       </main>
