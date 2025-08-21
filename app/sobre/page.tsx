@@ -81,7 +81,7 @@ export default function AboutPage() {
               <Link href="https://www.instagram.com/__freitasmachado.index__/" target="_blank">🐦 Instagram</Link>
             </Button>
             <Button asChild className="font-pixel bg-purple-700 hover:bg-purple-600 text-stone-100">
-              <Link href="https://discord.gg/uvqmYzws" target="_blank">🎮 Discord</Link>
+              <Link href="https://discord.gg/5aF9AtPKqu" target="_blank">🎮 Discord</Link>
             </Button>
           </div>
         </div>
